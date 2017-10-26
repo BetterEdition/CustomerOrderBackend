@@ -1,19 +1,17 @@
 ﻿using System;
-namespace CustomerSystemBLL.BusinessObjects
+namespace CustomersystemBLL.BusinessObjects
 {
-    public class CustomerBO : IBusinessObject
+    public class CustomerBO
     {
-        public int Id { get; set; }
-
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
+        public int Id;
+        public string firstName;
+        public string lastName;
+        public string Address;
 
         public string FullName
         {
-            get { return $"{FirstName} {LastName}"; }
-        }
-        public String Address { get; set; }
+            get { return $"{firstName} {lastName}"; }
 
-        public String Age { get; set; }
+        }
     }
 }
