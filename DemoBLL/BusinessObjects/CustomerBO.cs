@@ -3,8 +3,10 @@ namespace DemoBLL.BusinessObjects
 {
     public class CustomerBO
     {
-        public CustomerBO()
-        {
-        }
+        public int Id;
+        public string firstName;
+        public string lastName;
+        public string Address;
+
     }
 }
