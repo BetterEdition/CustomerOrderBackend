@@ -1,7 +1,6 @@
-﻿using DemoBLL.BusinessObjects;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace DemoBLL
+namespace CustomerSystemBLL
 {
     public interface IService<IBusinessObject>
     {

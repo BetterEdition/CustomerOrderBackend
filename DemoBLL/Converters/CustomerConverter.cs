@@ -1,5 +1,5 @@
 ﻿using System;
-using CustomersystemBLL.BusinessObjects;
+using CustomerSystemBLL.BusinessObjects;
 using System.Linq;
 using CustomerSystemDAL.Entities;
 

@@ -1,8 +1,9 @@
-﻿using System;
-namespace DemoBLL.BusinessObjects
+﻿namespace CustomerSystemBLL.BusinessObjects
 {
     public interface IBusinessObject
     {
         int Id { get; set; }
+
+
     }
 }
