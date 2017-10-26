@@ -1,6 +1,6 @@
-﻿using DemoDAL.UOW;
+﻿using CustomerSystemDAL.UOW;
 
-namespace DemoDAL.Facade
+namespace CustomerSystemDAL.Facade
 {
     public class DALFacade : IDALFacade
     {

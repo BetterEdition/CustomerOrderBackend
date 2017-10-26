@@ -1,8 +1,8 @@
 ﻿using System;
-using DemoDAL.Context;
+using CustomerSystemDAL.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace DemoDAL.UOW
+namespace CustomerSystemDAL.UOW
 {
     public class UnitOfWork : IUnitOfWork
     {

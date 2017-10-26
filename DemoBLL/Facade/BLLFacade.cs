@@ -1,9 +1,9 @@
 ﻿using System;
+using CustomerSystemDAL;
+using CustomerSystemDAL.Facade;
 using Microsoft.Extensions.Configuration;
-using DemoDAL;
-using DemoDAL.Facade;
 
-namespace DemoBLL.Facade
+namespace CustomerSystemBLL.Facade
 {
     public class BLLFacade : IBLLFacade
     {

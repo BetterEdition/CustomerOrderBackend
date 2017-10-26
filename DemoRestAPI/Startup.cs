@@ -1,5 +1,5 @@
-﻿using DemoBLL;
-using DemoBLL.Facade;
+﻿using CustomerSystemBLL;
+using CustomerSystemBLL.Facade;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

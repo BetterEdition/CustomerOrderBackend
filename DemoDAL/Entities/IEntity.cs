@@ -1,5 +1,4 @@
-﻿using System;
-namespace DemoDAL.Entities
+﻿namespace CustomerSystemDAL.Entities
 {
     interface IEntity
     {
