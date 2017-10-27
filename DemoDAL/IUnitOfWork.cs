@@ -5,8 +5,8 @@ namespace CustomerSystemDAL
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICustomerRepository CustomerRepository { get; }
-       
+        //ICustomerRepository CustomerRepository { get; }
+
         int Complete();
     }
 }
