@@ -1,7 +1,9 @@
-﻿namespace CustomerSystemBLL
+﻿using CustomerSystemBLL.Services;
+
+namespace CustomerSystemBLL
 {
     public interface IBLLFacade
     {
-        //ICustomerService CustomerService { get { return new CustomerService(facade); }
+        ICustomerService CustomerService { get; }
     }
 }
