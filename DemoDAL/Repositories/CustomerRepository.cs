@@ -1,4 +1,12 @@
 ﻿using System;
+<<<<<<< HEAD
+namespace CustomerSystemDAL.Repositories
+{
+    public class CustomerRepository
+    {
+        public CustomerRepository()
+        {
+=======
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +43,7 @@ namespace CustomerSystemDAL.Repositories
             var cust = Get(Id);
             _context.Customers.Remove(cust);
             return cust;
+>>>>>>> f4d5332d443b24ffb1e1acc0977e95d8d3086fee
         }
     }
 }
