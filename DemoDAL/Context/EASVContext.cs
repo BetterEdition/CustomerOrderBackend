@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CustomerSystemDAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CustomerSystemDAL.Context
 {
@@ -11,7 +12,7 @@ namespace CustomerSystemDAL.Context
             base.OnModelCreating(modelBuilder);
         }
 
-        //public DbSet<Entity> Entites { get; set; }
+        public DbSet<Customer> Customers { get; set; }
        
     }
 }

@@ -28,6 +28,8 @@ namespace CustomerSystemDAL.UOW
             //CustomerRepository = new CustomerRepository(context);
         }
 
+        public ICustomerRepository CustomerRepository { get; }
+
         public int Complete()
 		{
 			//The number of objects written to the underlying database.

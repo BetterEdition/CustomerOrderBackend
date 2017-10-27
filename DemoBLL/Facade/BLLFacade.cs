@@ -1,4 +1,5 @@
 ﻿using System;
+using CustomerSystemBLL.Services;
 using CustomerSystemDAL;
 using CustomerSystemDAL.Facade;
 using Microsoft.Extensions.Configuration;
@@ -15,6 +16,12 @@ namespace CustomerSystemBLL.Facade
                 ConnectionString = conf.GetConnectionString("DefaultConnection"),
                 Environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
             });
+        }
+
+
+        public ICustomerService CustomerService
+        {
+            get { return new CustomerService(new DALFacade(new DbOptions())); }
         }
     }
 }
