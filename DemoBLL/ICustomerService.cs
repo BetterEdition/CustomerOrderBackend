@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CustomerSystemBLL.BusinessObjects;
 
-namespace CustomerSystemBLL.Services
+namespace CustomerSystemBLL
 {
     public interface ICustomerService
     {
