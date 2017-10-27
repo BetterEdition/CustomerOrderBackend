@@ -11,6 +11,9 @@ namespace CustomerSystemDAL.Entities
 
         public string lastName { get; set; }
 
+        public String Address { get; set; }
+
+        public String Age { get; set; }
 
     }
 }
