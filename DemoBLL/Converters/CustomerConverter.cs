@@ -20,7 +20,7 @@ namespace CustomerSystemBLL.Converters
                 FirstName = cust.FirstName,
                 LastName = cust.LastName
 
-                //TEST
+
             };
         }
         internal CustomerBO convert(Customer cust)
