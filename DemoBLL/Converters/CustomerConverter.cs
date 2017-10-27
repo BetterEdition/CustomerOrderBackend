@@ -17,8 +17,8 @@ namespace CustomerSystemBLL.Converters
             return new Customer()
             {
                 Id = cust.Id,
-                FirstName = cust.FirstName,
-                LastName = cust.LastName
+                firstName = cust.firstName,
+                lastName = cust.lastName
             };
         }
         internal CustomerBO convert(Customer cust)
@@ -27,8 +27,8 @@ namespace CustomerSystemBLL.Converters
             return new CustomerBO()
             {
                 Id = cust.Id,
-                FirstName = cust.FirstName,
-                LastName = cust.LastName,
+                firstName = cust.firstName,
+                lastName = cust.lastName,
 
             };
         }
