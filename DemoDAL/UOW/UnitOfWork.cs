@@ -1,40 +1,42 @@
 ﻿using System;
 using CustomerSystemDAL.Context;
+using CustomerSystemDAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomerSystemDAL.UOW
 {
+
     public class UnitOfWork : IUnitOfWork
     {
-        // public ICustomerRepository CustomerRepository { get; internal set; }
+        public ICustomerRepository CustomerRepository { get; set; }
         private EASVContext context;
         private static DbContextOptions<EASVContext> optionsStatic;
-           
+
         public UnitOfWork(DbOptions opt)
         {
-             if(opt.Environment == "Development" && String.IsNullOrEmpty(opt.ConnectionString)){
+            if (opt.Environment == "Development" && String.IsNullOrEmpty(opt.ConnectionString))
+            {
                 optionsStatic = new DbContextOptionsBuilder<EASVContext>()
                    .UseInMemoryDatabase("TheDB")
                    .Options;
                 context = new EASVContext(optionsStatic);
             }
-            else{
+            else
+            {
                 var options = new DbContextOptionsBuilder<EASVContext>()
                 .UseSqlServer(opt.ConnectionString)
                     .Options;
                 context = new EASVContext(options);
             }
 
-            //CustomerRepository = new CustomerRepository(context);
+            CustomerRepository = new CustomerRepository(context);
         }
 
-        public ICustomerRepository CustomerRepository { get; }
-
         public int Complete()
-		{
-			//The number of objects written to the underlying database.
-			return context.SaveChanges();
-		}
+        {
+            //The number of objects written to the underlying database.
+            return context.SaveChanges();
+        }
 
         public void Dispose()
         {

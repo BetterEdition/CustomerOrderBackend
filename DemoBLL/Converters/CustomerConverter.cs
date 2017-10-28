@@ -19,6 +19,11 @@ namespace CustomerSystemBLL.Converters
                 Id = cust.Id,
                 FirstName = cust.FirstName,
                 LastName = cust.LastName
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c66e93a58bd89234e4fd2a82c63ca8b5202c0300
             };
         }
         internal CustomerBO convert(Customer cust)
