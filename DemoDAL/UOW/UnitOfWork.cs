@@ -1,5 +1,6 @@
 ﻿using System;
 using CustomerSystemDAL.Context;
+using CustomerSystemDAL.Entities;
 using CustomerSystemDAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,9 @@ namespace CustomerSystemDAL.UOW
     public class UnitOfWork : IUnitOfWork
     {
         public CustomerRepository CustomerRepository { get; internal set; }
+
+
+
         private EASVContext context;
         private static DbContextOptions<EASVContext> optionsStatic;
 
@@ -31,7 +35,7 @@ namespace CustomerSystemDAL.UOW
 
             CustomerRepository = new CustomerRepository(context);
         }
-        
+
 
         public int Complete()
         {

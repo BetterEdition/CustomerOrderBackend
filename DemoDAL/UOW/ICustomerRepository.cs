@@ -3,14 +3,15 @@ using CustomerSystemDAL.Entities;
 
 namespace CustomerSystemDAL.UOW
 {
-    public interface ICustomerRepository
-    {
-        Customer Create(Customer cust);
+    /* public interface ICustomerRepository
+     {
+         Customer Create(Customer cust);
 
-        List<Customer> GetAll();
+         List<Customer> GetAll();
 
-        Customer Get(int Id);
+         Customer Get(int Id);
 
-        Customer Delete(int Id);
-    }
+         Customer Delete(int Id);
+     }
+ */
 }

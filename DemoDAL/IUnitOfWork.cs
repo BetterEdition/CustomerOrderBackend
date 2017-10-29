@@ -1,11 +1,12 @@
 ﻿using System;
+using CustomerSystemDAL.Repositories;
 using CustomerSystemDAL.UOW;
 
 namespace CustomerSystemDAL
 {
     public interface IUnitOfWork : IDisposable
     {
-        //ICustomerRepository CustomerRepository { get; }
+        CustomerRepository CustomerRepository { get; }
 
         int Complete();
     }
