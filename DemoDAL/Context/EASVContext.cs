@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CustomerSystemDAL.Context
 {
-    class EASVContext : DbContext
+    public class EASVContext : DbContext
     {
         public EASVContext(DbContextOptions<EASVContext> options): base(options)  { }
 

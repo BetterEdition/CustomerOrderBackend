@@ -8,7 +8,7 @@ namespace CustomerSystemDAL.UOW
 
     public class UnitOfWork : IUnitOfWork
     {
-        public ICustomerRepository CustomerRepository { get; set; }
+        public CustomerRepository CustomerRepository { get; internal set; }
         private EASVContext context;
         private static DbContextOptions<EASVContext> optionsStatic;
 
@@ -31,6 +31,7 @@ namespace CustomerSystemDAL.UOW
 
             CustomerRepository = new CustomerRepository(context);
         }
+        
 
         public int Complete()
         {

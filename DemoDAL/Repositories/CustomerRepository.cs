@@ -9,7 +9,7 @@ using CustomerSystemDAL.Entities;
 namespace CustomerSystemDAL.Repositories
 {
 
-    class CustomerRepository : IRepository<Customer>
+    public class CustomerRepository : IRepository<Customer>
     {
         EASVContext _context;
 
