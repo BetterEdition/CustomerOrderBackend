@@ -32,6 +32,9 @@ namespace CustomerRestAPI.Controllers
         {
             return facade.CustomerService.Get(Id);
         }
+
+        
+
         // POST: api/Customers
         [HttpPost]
         public IActionResult Post([FromBody]CustomerBO cust)
