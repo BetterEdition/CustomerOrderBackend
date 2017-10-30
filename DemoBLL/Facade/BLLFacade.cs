@@ -16,13 +16,13 @@ namespace CustomerSystemBLL.Facade
             facade = new DALFacade(new DbOptions()
             {
                 ConnectionString = conf.GetConnectionString("DefaultConnection"),
-                Environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT Development")
+                Environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
             });
         }
 
 
         public ICustomerService CustomerService {
-            get { return new CustomerService(new DALFacade(new DbOptions())); }
+            get { return new CustomerService(facade); }
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using CustomerSystemBLL.BusinessObjects;
 using CustomerSystemBLL.Converters;
+using CustomerSystemDAL;
 using CustomerSystemDAL.Facade;
 using CustomerSystemDAL.UOW;
 
@@ -11,10 +12,10 @@ namespace CustomerSystemBLL.Services
 {
     class CustomerService : ICustomerService
     {
-        DALFacade facade;
+        IDALFacade facade;
         private CustomerConverter conv = new CustomerConverter();
 
-        public CustomerService(DALFacade facade)
+        public CustomerService(IDALFacade facade)
         {
             this.facade = facade;
         }

@@ -27,7 +27,7 @@ namespace CustomerSystemDAL.UOW
  */
         public UnitOfWork(DbOptions opt)
         {
-            if ("Development" == "Development" && String.IsNullOrEmpty(opt.ConnectionString))
+            if (opt.Environment == "Development" && String.IsNullOrEmpty(opt.ConnectionString))
             {
                 optionsStatic = new DbContextOptionsBuilder<EASVContext>()
                    .UseInMemoryDatabase("TheDB")
