@@ -10,6 +10,8 @@ namespace CustomerSystemBLL.Facade
     {
         private IDALFacade facade;
 
+        
+
         public BLLFacade(IConfiguration conf){
             facade = new DALFacade(new DbOptions()
             {
@@ -19,9 +21,8 @@ namespace CustomerSystemBLL.Facade
         }
 
 
-        public ICustomerService CustomerService
-        {
-            get { return new CustomerService(new DALFacade(new DbOptions())); }
+        public ICustomerService CustomerService {
+            get { return new CustomerService(facade); }
         }
     }
 }
