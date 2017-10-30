@@ -10,17 +10,18 @@ namespace CustomerSystemBLL.Facade
     {
         private IDALFacade facade;
 
+        
+
         public BLLFacade(IConfiguration conf){
             facade = new DALFacade(new DbOptions()
             {
                 ConnectionString = conf.GetConnectionString("DefaultConnection"),
-                Environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
+                Environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT Development")
             });
         }
 
 
-        public ICustomerService CustomerService
-        {
+        public ICustomerService CustomerService {
             get { return new CustomerService(new DALFacade(new DbOptions())); }
         }
     }

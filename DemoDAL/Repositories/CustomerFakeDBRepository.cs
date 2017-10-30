@@ -27,7 +27,10 @@ namespace CustomerAppDAL.Repositories
 
         public Customer Delete(int Id)
         {
-            return null;
+            var cust = Get(Id);
+
+            Customers.Remove(cust);
+            return cust;
         }
 
         public Customer Get(int Id)
@@ -37,7 +40,7 @@ namespace CustomerAppDAL.Repositories
 
         public IEnumerable<Customer> GetAll()
         {
-            return null;
+              return new List<Customer>(Customers);
         }
 
         public IEnumerable<Customer> GetAllById(List<int> ids)

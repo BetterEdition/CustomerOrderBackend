@@ -22,9 +22,9 @@ namespace CustomerRestAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IEnumerable<CustomerBO> Get()
         {
-            return Ok(new List<CustomerBO>());
+            return facade.CustomerService.GetAll();
         }
 
         [HttpGet("{Id}")]
@@ -42,5 +42,6 @@ namespace CustomerRestAPI.Controllers
             }
             return Ok(facade.CustomerService.Create(cust));
         }
+
     }
 }
