@@ -51,7 +51,7 @@ namespace CustomerSystemBLL.Services
             using (var uow = facade.UnitOfWork)
             {
                 var customerFromDb = uow.CustomerRepository.Get(cust.Id);
-                if (customerFromDb == null) 
+                if (customerFromDb == null)
                 {
                     throw new InvalidOperationException("Customer not found");
                 }
