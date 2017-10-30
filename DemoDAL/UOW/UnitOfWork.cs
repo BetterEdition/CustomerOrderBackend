@@ -9,13 +9,18 @@ namespace CustomerSystemDAL.UOW
 
     public class UnitOfWork : IUnitOfWork
     {
-        public CustomerRepository CustomerRepository { get; internal set; }
-
-
+        public ICustomerRepository CustomerRepository { get; internal set; }
 
         private EASVContext context;
         private static DbContextOptions<EASVContext> optionsStatic;
 
+        /* public UnitOfWork()
+         {
+             context = new EASVContext();
+             CustomerRepository = new CustomerRepository(context);
+
+         }
+ */
         public UnitOfWork(DbOptions opt)
         {
             if (opt.Environment == "Development" && String.IsNullOrEmpty(opt.ConnectionString))

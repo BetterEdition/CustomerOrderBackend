@@ -5,7 +5,10 @@ namespace CustomerSystemDAL.Context
 {
     public class EASVContext : DbContext
     {
-        public EASVContext(DbContextOptions<EASVContext> options): base(options)  { }
+        public EASVContext(DbContextOptions<EASVContext> options) : base(options) { }
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -13,6 +16,6 @@ namespace CustomerSystemDAL.Context
         }
 
         public DbSet<Customer> Customers { get; set; }
-       
+
     }
 }
