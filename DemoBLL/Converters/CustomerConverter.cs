@@ -20,12 +20,9 @@ namespace CustomerSystemBLL.Converters
             {
                 Id = cust.Id,
                 FirstName = cust.FirstName,
-<<<<<<< HEAD
-                LastName = cust.LastName,
-=======
-                LastName = cust.LastName
 
->>>>>>> 114be74babcbd96a6165d94303759e692354420f
+                LastName = cust.LastName,
+
 
             };
         }
