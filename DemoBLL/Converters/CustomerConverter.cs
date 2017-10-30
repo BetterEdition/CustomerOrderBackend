@@ -5,27 +5,16 @@ using CustomerSystemDAL.Entities;
 
 namespace CustomerSystemBLL.Converters
 {
-    public class CustomerConverter
+    public class CustomerConverter : IConverter<Customer, CustomerBO>
     {
         public CustomerConverter()
         {
 
         }
-        internal Customer Convert(CustomerBO cust)
+
+        public CustomerBO Convert(Customer cust)
         {
-            if (cust == null) { return null; }
-            return new Customer()
-            {
-                Id = cust.Id,
-                FirstName = cust.FirstName,
-                LastName = cust.LastName
 
-
-
-            };
-        }
-        internal CustomerBO convert(Customer cust)
-        {
             if (cust == null) { return null; }
             return new CustomerBO()
             {
@@ -33,6 +22,18 @@ namespace CustomerSystemBLL.Converters
                 FirstName = cust.FirstName,
                 LastName = cust.LastName,
 
+            };
+        }
+
+
+        public Customer Convert(CustomerBO cust)
+        {
+            if (cust == null) { return null; }
+            return new Customer()
+            {
+                Id = cust.Id,
+                FirstName = cust.FirstName,
+                LastName = cust.LastName
             };
         }
     }

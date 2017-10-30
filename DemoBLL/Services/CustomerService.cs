@@ -24,8 +24,7 @@ namespace CustomerSystemBLL.Services
             {
                 var newCust = uow.CustomerRepository.Create(conv.Convert(cust));
                 uow.Complete();
-
-                return conv.convert(newCust);
+                return conv.Convert(newCust);
             }
         }
 
@@ -33,7 +32,7 @@ namespace CustomerSystemBLL.Services
         {
             using (var uow = facade.UnitOfWork)
             {
-                return uow.CustomerRepository.GetAll().Select(c => conv.convert(c)).ToList();
+                return uow.CustomerRepository.GetAll().Select(c => conv.Convert(c)).ToList();
             }
         }
 
@@ -41,7 +40,7 @@ namespace CustomerSystemBLL.Services
         {
             using (var uow = facade.UnitOfWork)
             {
-                return conv.convert(uow.CustomerRepository.Get(Id));
+                return conv.Convert(uow.CustomerRepository.Get(Id));
             }
 
         }
@@ -60,7 +59,7 @@ namespace CustomerSystemBLL.Services
                 customerFromDb.Address = cust.Address;
                 customerFromDb.Age = cust.Age;
                 uow.Complete();
-                return conv.convert(customerFromDb);
+                return conv.Convert(customerFromDb);
             }
         }
 
@@ -70,7 +69,7 @@ namespace CustomerSystemBLL.Services
             {
                 var newcust = uow.CustomerRepository.Delete(Id);
                 uow.Complete();
-                return conv.convert(newcust);
+                return conv.Convert(newcust);
             }
 
         }

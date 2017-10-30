@@ -4,18 +4,8 @@ using CustomerSystemBLL.BusinessObjects;
 
 namespace CustomerSystemBLL.Services
 {
-    public interface ICustomerService
+    public interface ICustomerService : IService<CustomerBO>
     {
-        CustomerBO Create(CustomerBO cust);
-
-        List<CustomerBO> GetAll();
-
-        CustomerBO Get(int id);
-
-        CustomerBO Update(CustomerBO cust);
-
-        CustomerBO Delete(int Id);
-
 
     }
 }
