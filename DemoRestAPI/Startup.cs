@@ -1,4 +1,5 @@
 ﻿using CustomerSystemBLL;
+using CustomerSystemBLL.BusinessObjects;
 using CustomerSystemBLL.Facade;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,12 +47,35 @@ namespace CustomerRestAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            
+
             if (env.IsDevelopment())
             {
-				loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-				loggerFactory.AddDebug();
+                var facade = new BLLFacade(Configuration);
+                var cust = facade.CustomerService.Create(
+                    new CustomerBO()
+                    {
+                        FirstName = "dd",
+                        LastName = "ff",
 
+                    });
+                var cust2 = facade.CustomerService.Create(
+                    new CustomerBO()
+                    {
+                        FirstName = "tt",
+                        LastName = "ss",
+
+                    });
+                var cust3 = facade.CustomerService.Create(
+                    new CustomerBO()
+                    {
+                        FirstName = "dd",
+                        LastName = "ee",
+
+                    });
+            
+
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+				loggerFactory.AddDebug();
 				app.UseDeveloperExceptionPage();
             }
 
