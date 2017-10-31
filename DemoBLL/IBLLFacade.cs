@@ -5,5 +5,6 @@ namespace CustomerSystemBLL
     public interface IBLLFacade
     {
         ICustomerService CustomerService { get; }
+        IOrderService OrderService { get; }
     }
 }

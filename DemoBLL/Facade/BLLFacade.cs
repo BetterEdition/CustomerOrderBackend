@@ -10,9 +10,10 @@ namespace CustomerSystemBLL.Facade
     {
         private IDALFacade facade;
 
-        
 
-        public BLLFacade(IConfiguration conf){
+
+        public BLLFacade(IConfiguration conf)
+        {
             facade = new DALFacade(new DbOptions()
             {
                 ConnectionString = conf.GetConnectionString("DefaultConnection"),
@@ -21,8 +22,14 @@ namespace CustomerSystemBLL.Facade
         }
 
 
-        public ICustomerService CustomerService {
+        public ICustomerService CustomerService
+        {
             get { return new CustomerService(facade); }
+
+        }
+        public IOrderService OrderService
+        {
+            get { return new OrderService(facade); }
         }
     }
 }

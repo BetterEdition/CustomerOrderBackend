@@ -9,7 +9,7 @@ namespace CustomerSystemDAL
 
 
         ICustomerRepository CustomerRepository { get; }
-
+        IorderRepository OrderRepository { get; }
 
         int Complete();
     }
