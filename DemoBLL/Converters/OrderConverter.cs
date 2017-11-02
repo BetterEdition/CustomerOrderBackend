@@ -18,6 +18,7 @@ namespace CustomerSystemBLL.Converters
                 Id = order.Id,
                 orderDate = order.orderDate,
                 deliveryDate = order.deliveryDate,
+                CustomerId = order.CustomerId,
             };
 
         }
@@ -30,6 +31,8 @@ namespace CustomerSystemBLL.Converters
                 Id = order.Id,
                 orderDate = order.orderDate,
                 deliveryDate = order.deliveryDate,
+                Customer = new CustomerConverter().Convert(order.Customer),
+                CustomerId = order.CustomerId,
             };
 
         }

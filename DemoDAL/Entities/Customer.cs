@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace CustomerSystemDAL.Entities
@@ -14,6 +15,8 @@ namespace CustomerSystemDAL.Entities
         public String Address { get; set; }
 
         public String Age { get; set; }
+
+        public List<CustomerOrder> Orders { get; set; }
 
     }
 }
