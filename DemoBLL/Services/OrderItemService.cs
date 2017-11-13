@@ -57,10 +57,11 @@ namespace CustomerSystemBLL.Services
 
         public OrderItemBO Update(OrderItemBO bo)
         {
-            using (var uow = facade.UnitOfWork)
+           /* using (var uow = facade.UnitOfWork)
             {
                 var newoItem = uow.OrderItemRepository.Create();
-            }
+            }*/
+            return null;
         }
     }
 }
