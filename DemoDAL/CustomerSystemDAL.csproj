@@ -17,5 +17,6 @@
     <Compile Remove="Entities\Address.cs" />
     <Compile Remove="Entities\CustomerAddress.cs" />
     <Compile Remove="Repositories\CustomerRepositoryFakeDB.cs" />
+    <Compile Remove="Entities\CustomerOrder.cs" />
   </ItemGroup>
 </Project>

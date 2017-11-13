@@ -6,5 +6,6 @@ namespace CustomerSystemBLL
     {
         ICustomerService CustomerService { get; }
         IOrderService OrderService { get; }
+        IOrderItemService OrderItemService { get; }
     }
 }

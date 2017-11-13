@@ -13,7 +13,7 @@ namespace CustomerSystemDAL.UOW
 
         public ICustomerRepository CustomerRepository { get; internal set; }
         public IorderRepository OrderRepository { get; internal set; }
-
+        public IOrderItemRepository OrderItemRepository { get; internal set; }
 
         private EASVContext context;
         private static DbContextOptions<EASVContext> optionsStatic;

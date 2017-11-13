@@ -16,7 +16,7 @@ namespace CustomerSystemDAL.Entities
 
         public String Age { get; set; }
 
-        public List<CustomerOrder> Orders { get; set; }
+        public List<Order> Orders { get; set; }
 
     }
 }

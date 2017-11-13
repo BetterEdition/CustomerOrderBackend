@@ -19,5 +19,7 @@ namespace CustomerSystemDAL.Context
 
         public DbSet<Order> Orders { get; set; }
 
+        public DbSet<OrderItem> OrderItems { get; set; }
+
     }
 }

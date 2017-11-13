@@ -12,7 +12,7 @@ namespace CustomerSystemBLL.Converters
         private OrderConverter oConv;
         public CustomerConverter()
         {
-            var OConv = new OrderConverter();
+            oConv = new OrderConverter();
         }
 
         public CustomerBO Convert(Customer cust)
@@ -24,7 +24,7 @@ namespace CustomerSystemBLL.Converters
                 Id = cust.Id,
                 FirstName = cust.FirstName,
                 LastName = cust.LastName,
-                orderIds = cust.Orders?.Select(o => o.OrderId).ToList()
+                orderIds = cust.Orders?.Select(o => o.Id).ToList()
 
             };
         }
@@ -35,9 +35,9 @@ namespace CustomerSystemBLL.Converters
             return new Customer()
             {
                 Id = cust.Id,
-                Orders = cust.orderIds?.Select(oId => new CustomerOrder()
+                Orders = cust.orderIds?.Select(oId => new Order()
                 {
-                    OrderId = oId,
+                    Id = oId,
                     CustomerId = cust.Id
                 }).ToList(),
                 FirstName = cust.FirstName,

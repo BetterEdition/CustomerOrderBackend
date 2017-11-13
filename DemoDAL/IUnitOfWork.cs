@@ -10,6 +10,7 @@ namespace CustomerSystemDAL
 
         ICustomerRepository CustomerRepository { get; }
         IorderRepository OrderRepository { get; }
+        IOrderItemRepository OrderItemRepository { get; }
 
         int Complete();
     }

@@ -10,6 +10,7 @@ namespace CustomerSystemBLL.BusinessObjects
         public String Address { get; set; }
         public String Age { get; set; }
 
+
         public List<int> orderIds { get; set; }
         public List<OrderBO> orders { get; set; }
 
@@ -18,6 +19,9 @@ namespace CustomerSystemBLL.BusinessObjects
         {
             get { return $"{FirstName} {LastName}"; }
         }
+
+
+
     }
 
 }
