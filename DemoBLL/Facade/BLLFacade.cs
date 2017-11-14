@@ -32,6 +32,9 @@ namespace CustomerSystemBLL.Facade
             get { return new OrderService(facade); }
         }
 
-        public IOrderItemService OrderItemService { get; }
+        public IOrderItemService OrderItemService
+        {
+            get { return new OrderItemService(facade); }
+        }
     }
 }

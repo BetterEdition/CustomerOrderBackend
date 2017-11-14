@@ -50,7 +50,25 @@ namespace CustomerRestAPI
 
             if (env.IsDevelopment())
             {
+                
                 var facade = new BLLFacade(Configuration);
+
+                var orderItem = facade.OrderItemService.Create(new OrderItemBO()
+                {
+                    UnitPrice = 3.5,
+                    Quantity = 10,
+                    
+                });
+                
+
+                var order = facade.OrderService.Create(new OrderBO()
+                {
+                    CustomerId = 5,
+
+
+
+                });
+
                 var cust = facade.CustomerService.Create(
                     new CustomerBO()
                     {
