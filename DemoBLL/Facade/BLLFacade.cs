@@ -31,23 +31,15 @@ namespace CustomerSystemBLL.Facade
         {
             get { return new OrderService(facade); }
         }
-<<<<<<< HEAD
+
 
         public IOrderItemService OrderItemService
         {
             get { return new OrderItemService(facade); }
         }
-||||||| merged common ancestors
-=======
-
-<<<<<<< HEAD
-        public IOrderItemService OrderItemService
-        {
-            get { return new OrderItemService(facade); }
-        }
-=======
-        public IOrderItemService OrderItemService { get; }
->>>>>>> 1faddd91ad149b93bc9348695bd83fa7d10dc946
->>>>>>> ba1528594c465c151a21b4e673d50d53754af806
     }
 }
+
+
+
+

@@ -43,6 +43,7 @@ namespace CustomerSystemDAL.UOW
             }
             OrderRepository = new OrderRepository(context);
             CustomerRepository = new CustomerRepository(context);
+            OrderItemRepository = new OrderItemRepository(context);
         }
 
 
