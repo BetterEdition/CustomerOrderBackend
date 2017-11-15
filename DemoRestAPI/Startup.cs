@@ -56,7 +56,7 @@ namespace CustomerRestAPI
 
                 var orderItem = facade.OrderItemService.Create(new OrderItemBO()
                 {
-
+                    ItemName = "panties",
                     UnitPrice = 3.5,
                     Quantity = 10,
 
